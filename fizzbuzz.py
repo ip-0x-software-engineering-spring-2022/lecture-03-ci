@@ -8,13 +8,13 @@ import argparse
 
 def fizzbuzz(i):
     if i % 15 == 0:
-        print("fizzbuzz")
+        return ("fizzbuzz")
     elif i % 5 == 0:
-        print("buzz")
+        return ("buzz")
     elif i % 3 == 0:
-        print("fizz")
+        return ("fizz")
     else:
-        print(str(i))
+        return (str(i))
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
@@ -22,4 +22,4 @@ if __name__ == '__main__':
     cli = ap.parse_args()
 
     for i in range(1, cli.number + 1):
-        fizzbuzz(i)
+        print(fizzbuzz(i))
